@@ -1,0 +1,70 @@
+﻿@model WebApplication3.Models.CultureAssets
+@{
+    ViewBag.Title = "Update";
+}
+<h2>수정 화면</h2>
+@using (Html.BeginForm("Updatepost", "CRUD", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>Employee</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger"})
+        <div class="form-group">
+            @Html.LabelFor(model => model.ca_type, htmlAttributes: new{
+        @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ca_type, new {htmlAttributes = new{
+            @class = "form-concontrol"} })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ca_name, htmlAttributes: new{
+        @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ca_name, new {htmlAttributes= new{
+            @class = "form-concontrol"} })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ca_addr, htmlAttributes: new{
+        @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ca_addr, new {htmlAttributes= new{
+            @class = "form-concontrol"} })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ca_period, htmlAttributes: new{
+        @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ca_period, new {htmlAttributes= new{
+            @class = "form-concontrol"} })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ca_date, htmlAttributes: new{
+        @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ca_date, new {htmlAttributes= new{
+            @class = "form-concontrol"} })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ca_detail, htmlAttributes: new{
+        @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ca_detail, new {htmlAttributes= new{
+            @class = "form-concontrol"} })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="Button" />
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,69 @@
+﻿using WebApplication3.Models;
+@model WebApplication3.Models.CultureAssets
+@{
+    ViewBag.Title = "데이터 입력";
+}
+<h2>Create</h2>
+@using (Html.BeginForm("Createpost", "CRUD", FormMethod.Post)) //<<세이브 누르면 욜로가란거임
+{
+    @Html.AntiForgeryToken()
+    <table>
+        <tr>
+            <td>
+                문화재 종목
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_type)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                문화재 이름
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                소재지
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_addr)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                시대명
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_period)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                지정일
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_date)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                세부사항
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_detail)
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </td>
+        </tr>
+
+    </table>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

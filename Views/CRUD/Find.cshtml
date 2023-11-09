@@ -1,0 +1,30 @@
+﻿@model WebApplication3.Models.CultureAssets
+@{
+    ViewBag.Title = "Research";
+}
+
+<h2>Research</h2>
+@using (Html.BeginForm("Findpost", "CRUD", FormMethod.Post))
+{
+
+    <table>
+        <tr>
+            <td>
+                문화재 이름
+            </td>
+            <td>
+                @Html.TextBoxFor(m => m.ca_name)
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Find" class="btn btn-default" />
+            </td>
+        </tr>
+
+    </table>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

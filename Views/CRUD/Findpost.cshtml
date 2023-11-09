@@ -1,0 +1,61 @@
+﻿@model WebApplication3.Models.CultureAssets
+@{
+    ViewBag.Title = "Find";
+}
+
+
+<h2>Research result</h2>
+<table>
+    <tr>
+        <td>
+            문화재 종목
+        </td>
+        <td>
+            @Html.TextBoxFor(m =>m.ca_type)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            문화재 이름
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.ca_name)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            소재지
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.ca_addr)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            시대명
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.ca_period)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            지정일
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.ca_date)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            세부사항
+        </td>
+        <td>
+            @Html.TextBoxFor(m => m.ca_detail)
+        </td>
+    </tr>
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
